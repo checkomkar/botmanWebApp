@@ -40,6 +40,16 @@ $('#right').on('click', function(e){
 	});
 })
 
+$('#stop').on('click', function(e){
+	e.preventDefault();
+	$.ajax({
+	  url: url+"stop",
+	  context: document.body
+	}).done(function(res) {
+	  $('#result').text(JSON.stringify(res))
+	});
+})
+
 var ajax = function(req){
 	
 	/*$.ajax({url: "http://botman007.pythonanywhere.com/"+ req, success: function(result){

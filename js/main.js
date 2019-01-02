@@ -1,9 +1,9 @@
 
-var res;
+var url = "https://botman007.pythonanywhere.com/";
 $('#forward').on('click', function(e){
 	e.preventDefault();
 	$.ajax({
-	  url: "http://botman007.pythonanywhere.com/forward",
+	  url: url+"forward",
 	  context: document.body
 	}).done(function(res) {
 	  $('#result').text(JSON.stringify(res))
@@ -13,7 +13,7 @@ $('#forward').on('click', function(e){
 $('#backward').on('click', function(e){
 	e.preventDefault();
 	$.ajax({
-	  url: "http://botman007.pythonanywhere.com/backward",
+	  url: url+"backward",
 	  context: document.body
 	}).done(function(res) {
 	  $('#result').text(JSON.stringify(res))
@@ -23,7 +23,7 @@ $('#backward').on('click', function(e){
 $('#left').on('click', function(e){
 	e.preventDefault();
 	$.ajax({
-	  url: "http://botman007.pythonanywhere.com/left",
+	  url: url+"left",
 	  context: document.body
 	}).done(function(res) {
 	  $('#result').text(JSON.stringify(res))
@@ -33,7 +33,7 @@ $('#left').on('click', function(e){
 $('#right').on('click', function(e){
 	e.preventDefault();
 	$.ajax({
-	  url: "http://botman007.pythonanywhere.com/right",
+	  url: url+"right",
 	  context: document.body
 	}).done(function(res) {
 	  $('#result').text(JSON.stringify(res))
